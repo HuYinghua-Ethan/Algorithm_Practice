@@ -6,7 +6,8 @@
 # 二分查找
 def binery_search(nums, target):
     left, right = 0, len(nums) - 1
-    while left <= right:
+    # 循环，当搜索区间为空时跳出（当 i > j 时为空）
+    while left <= right:  
         m = (left + right) // 2
         if(nums[m] < target):  # target 在中值的右边
             left = m + 1
